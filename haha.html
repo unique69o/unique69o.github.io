@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Driving Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section.booking-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    form label,
+    form input,
+    form button {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+    }
+
+    form button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Taxi Driving Services</h1>
+    <!-- Add logo or other header elements as needed -->
+  </header>
+
+  <nav>
+    <!-- Add navigation menu links here -->
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <section class="booking-form">
+      <h2>Book a Taxi</h2>
+      <form id="bookingForm">
+        <label for="pickupLocation">Pickup Location:</label>
+        <input type="text" id="pickupLocation" required>
+
+        <label for="dropoffLocation">Dropoff Location:</label>
+        <input type="text" id="dropoffLocation" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" required>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- Add more sections and content for your website -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Taxi Driving Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code for handling the form submission
+    const bookingForm = document.getElementById('bookingForm');
+
+    bookingForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get form values
+      const pickupLocation = document.getElementById('pickupLocation').value;
+      const dropoffLocation = document.getElementById('dropoffLocation').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+
+      // Here, you can add code to process the form data, such as booking a taxi or showing a confirmation message.
+      console.log("Booking Details:");
+      console.log("Pickup Location:", pickupLocation);
+      console.log("Dropoff Location:", dropoffLocation);
+      console.log("Date:", date);
+      console.log("Time:", time);
+    });
+  </script>
+</body>
+</html>
